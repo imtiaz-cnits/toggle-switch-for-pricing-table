@@ -19,7 +19,7 @@ body {
 .toggle_switch *::-moz-selection,
 .toggle_switch *:after::-moz-selection,
 .toggle_switch *:before::-moz-selection,
-.toggle_switch + .toggle_switch-button::-moz-selection {
+.toggle_switch+.toggle_switch-button::-moz-selection {
   background: none;
 }
 
@@ -29,11 +29,11 @@ body {
 .toggle_switch *::selection,
 .toggle_switch *:after::selection,
 .toggle_switch *:before::selection,
-.toggle_switch + .toggle_switch-button::selection {
+.toggle_switch+.toggle_switch-button::selection {
   background: none;
 }
 
-.toggle_switch + .toggle_switch-button {
+.toggle_switch+.toggle_switch-button {
   outline: 0;
   display: block;
   width: 4em;
@@ -48,8 +48,8 @@ body {
   user-select: none;
 }
 
-.toggle_switch + .toggle_switch-button:after,
-.toggle_switch + .toggle_switch-button:before {
+.toggle_switch+.toggle_switch-button:after,
+.toggle_switch+.toggle_switch-button:before {
   position: relative;
   display: block;
   content: "";
@@ -57,19 +57,19 @@ body {
   height: 100%;
 }
 
-.toggle_switch + .toggle_switch-button:after {
+.toggle_switch+.toggle_switch-button:after {
   left: 0;
 }
 
-.toggle_switch + .toggle_switch-button:before {
+.toggle_switch+.toggle_switch-button:before {
   display: none;
 }
 
-.toggle_switch:checked + .toggle_switch-button:after {
+.toggle_switch:checked+.toggle_switch-button:after {
   left: 50%;
 }
 
-.toggle_switch-ios + .toggle_switch-button {
+.toggle_switch-ios+.toggle_switch-button {
   background: rgba(215, 96, 249, 0.15);
   border-radius: 2em;
   padding: 2px;
@@ -78,7 +78,7 @@ body {
   border: 1px solid #d760f9;
 }
 
-.toggle_switch-ios + .toggle_switch-button:after {
+.toggle_switch-ios+.toggle_switch-button:after {
   border-radius: 50px;
   background: #d760f9;
   -webkit-transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
@@ -88,25 +88,26 @@ body {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
 }
 
-.toggle_switch-ios + .toggle_switch-button:hover:after {
+.toggle_switch-ios+.toggle_switch-button:hover:after {
   will-change: padding;
 }
 
-.toggle_switch-ios + .toggle_switch-button:active {
+.toggle_switch-ios+.toggle_switch-button:active {
   box-shadow: inset 0 0 0 2em #e8eae9;
 }
 
-.toggle_switch-ios + .toggle_switch-button:active:after {
+.toggle_switch-ios+.toggle_switch-button:active:after {
   padding-right: 0.8em;
 }
-.toggle_switch-ios:checked + .toggle_switch-button {
+
+.toggle_switch-ios:checked+.toggle_switch-button::after {
   background: #fff;
 }
 
-.toggle_switch-ios:checked + .toggle_switch-button:active {
+.toggle_switch-ios:checked+.toggle_switch-button:active {
   box-shadow: none;
 }
 
-.toggle_switch-ios:checked + .toggle_switch-button:active:after {
+.toggle_switch-ios:checked+.toggle_switch-button:active:after {
   margin-left: -0.8em;
 }
